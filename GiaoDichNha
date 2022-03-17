@@ -1,0 +1,76 @@
+import java.util.Scanner;
+
+public abstract class GiaoDichNha {
+    protected double MaGD, DonGia, DienTich;
+    protected String NgayGD, DiaChi;
+
+    public GiaoDichNha() {
+        this.MaGD = 0;
+        this.NgayGD = "";
+        this.DonGia = 0;
+        this.DiaChi = "";
+        this.DienTich = 0;
+
+    }
+public GiaoDichNha(double maGD, double donGia, double dienTich, String ngayGD, String Diachi, Scanner in) {
+        MaGD = MGD;
+        DonGia = DG;
+        DienTich = DT;
+        NgayGD =NGD;
+        DiaChi = DC;
+
+    }
+public void setMaGD() {
+        MaGD = MaGD;
+    }
+
+    public double getMaGD() {
+        return MaGD;
+    }
+
+    public void setDonGia() {
+        DonGia = DonGia;
+    }
+
+    public double getDonGia() {
+        return DonGia;
+    }
+
+    public void setDienTich() {
+        DienTich = DienTich;
+    }
+
+    public double getDienTich() {
+        return DienTich;
+    }
+
+    public void setNgayGD() {
+        NgayGD = NgayGD;
+    }
+
+    public String getNgayGD() {
+        return NgayGD;
+    }
+
+    public void setDiaChi() {
+       DiaChi = DiaChi;
+    }
+
+    public String getDiaChi() {
+        return DiaChi;
+    }
+    public void nhap() {
+        Scanner in = new Scanner(System.in);
+        MaGD = in.nextDouble();
+        NgayGD = in.nextLine();
+        DonGia = in.nextDouble();
+        DiaChi = in.nextLine();
+        DienTich = in.nextDouble();
+    }
+     @Override
+    public String toString() {
+        return "GiaoDichNha [DienTich=" + DienTich + ", DonGia=" + DonGia + ", Diachi=" + DiaChi + ", MaGD=" + MaGD
+                + ", NgayGD=" + NgayGD + "]";
+    }
+
+}
